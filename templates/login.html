@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div id="fundo">
+        <div id="login">
+            <div id="form">
+            <div class="form-email">
+                <label for="email" style="color: #ffffff">Usuario </label>
+                <input type="text" name="email" id="email" placeholder="Digite seu nome de usuário">
+            </div>
+            <div class="form-senha" style="color: #ffffff">
+                <label for="senha">Senha</label>
+                <input type="password" name="password" id="password" placeholder="Digite sua senha">
+            </div>
+            <button id="enviar"> enviar </button>
+            
+        </div>
+
+    </div>    
+</body>
+</html>
+
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>

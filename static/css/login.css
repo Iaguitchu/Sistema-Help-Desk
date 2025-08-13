@@ -1,0 +1,38 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#fundo {
+    background-color: red;
+    padding: 20px;
+}
+
+#form {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.form-email{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-senha{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#enviar{
+    margin-top: 10px;
+}
+
+#enviar{
+    cursor: pointer;
+}
