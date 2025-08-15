@@ -2,12 +2,14 @@ from flask import Flask
 from flask_session import Session
 from flask_compress import Compress
 from blueprints.page import page
+from blueprints.auth import auth
 import sqlite3
 
 
 app = Flask(__name__, static_url_path='', static_folder='static')
 
 app.register_blueprint(page)
+app.register_blueprint(auth)
 
 def init_db():
     conn = sqlite3.connect("meu_banco.db")  # abre/conecta ao banco (se não existir, cria)
