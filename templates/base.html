@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="/logout" id="sair"> Sair  </a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="conteudo">
+        {% block body %}
+
+		{% endblock %}
+    </div>
+    
+</body>
+
+<script  src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+</html>
+

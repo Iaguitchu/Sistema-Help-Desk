@@ -7,6 +7,13 @@ btn_enviar.addEventListener("click",function() {
     var email = email_input.value
     var password = password_input.value
 
+    if (!email || !password) {
+        alert("Preencha email e senha.");
+        return;
+    }
+    
+    btn_enviar.disabled = true;
+
     fetch('/login', {
         method:"POST",
         headers:{
@@ -18,7 +25,8 @@ btn_enviar.addEventListener("click",function() {
         }),
     }).then(response => {
         if (response.redirected) {
-            window.location.href = response.url; // redireciona se o back-end mandar redirect
+            window.location.href = response.url;
+            return;
         } else {
             return response.json();
         }
@@ -26,5 +34,8 @@ btn_enviar.addEventListener("click",function() {
     .then(data => {
         console.log(data);
     })
-    .catch(error => console.error("Erro:", error));
+    .catch(error => console.error("Erro:", error))
+    .finally(() => {
+    btn_enviar.disabled = false;
+  });
 });

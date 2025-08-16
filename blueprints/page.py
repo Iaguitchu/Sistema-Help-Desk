@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify, render_template, current_app
 import sqlite3
-
+from session.nivelAcesso import access_required
 
 page = Blueprint('page', __name__)
 
@@ -11,6 +11,7 @@ def get_db():
     return conn
 
 @page.route('/')
+@access_required(1)
 def home():
 
     conn = get_db()

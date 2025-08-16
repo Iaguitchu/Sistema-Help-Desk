@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Lista de Usuários</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block body %}
+
     <h1>Usuários Cadastrados</h1>
     <table border="1">
         <tr>
@@ -22,5 +19,9 @@
         </tr>
         {% endfor %}
     </table>
-</body>
-</html>
+
+
+
+<script  src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+{% endblock %}

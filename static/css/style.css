@@ -1,0 +1,31 @@
+body{
+    background-color: brown;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+    
+}
+
+li{
+    list-style-type: none;  
+}
+
+
+.menu{
+    background-color: rgb(29, 29, 82);
+    padding: 10px;
+    display: block;      
+}
+
+
+#sair{
+    color: white;
+    cursor: pointer;
+}
+
+#sair:hover{
+    color: red;
+}
