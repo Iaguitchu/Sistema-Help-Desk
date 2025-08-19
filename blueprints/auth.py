@@ -24,7 +24,10 @@ def login():
         if len(consulta) > 0:
             session['loggedin'] = True
             session['role'] = int(consulta[0][2])
-            return redirect('/')
+            if session['role'] > 1:
+                return redirect('/admin')
+            else:
+                return redirect('/')
         else:
             return redirect('/login')
         

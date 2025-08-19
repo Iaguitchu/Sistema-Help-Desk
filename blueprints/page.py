@@ -19,6 +19,13 @@ def home():
     conn.close()
     return render_template("home.html", usuarios=usuarios)
 
+
 @page.route('/login')
 def login():
     return render_template('login.html')
+
+
+@page.route('/admin')
+@access_required(1)
+def admin():
+    return render_template("admin.html")
